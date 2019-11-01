@@ -8,10 +8,30 @@
 }
 
 body {
-  overflow: hidden;
-  overflow-y: scroll;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 1px;
+  transform-style: preserve-3d;
 }
-
+/* --------------------PARALLAX-SCROLLING----------------- */
+.parallax-wrapper {
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  transform-style: preserve-3d;
+}
+.parallax-wrapper::before {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: -1;
+  transform: translateZ(-1px) scale(2);
+}
+.content {
+  margin: 0 auto;
+}
 #big-wrapper {
   position: relative;
 }
@@ -86,6 +106,7 @@ body {
 .little-comp {
   width: 300px;
 }
+
 .my-projects {
   width: 100vw;
   text-align: center;
