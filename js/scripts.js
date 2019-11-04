@@ -99,7 +99,7 @@ startFade('.c3', 500)
 startFade('.c4', 700)
 startFade('.c5', 900)
 startFade('.c6', 1100)
-startFade('c7', 1400)
+startFade('.c7', 1400)
 
 
 // ---------------MODAL---------------
