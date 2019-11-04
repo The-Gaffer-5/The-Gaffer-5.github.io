@@ -99,6 +99,7 @@ startFade('.c3', 500)
 startFade('.c4', 700)
 startFade('.c5', 900)
 startFade('.c6', 1100)
+startFade('c7', 1400)
 
 
 // ---------------MODAL---------------
@@ -115,7 +116,8 @@ var teacherrepository = (function () {
       instruments: "https://prescottflixapp.herokuapp.com/client/",
       github: "https://github.com/The-Gaffer-5/Nerdflix",
       description: "MERN stack (MongoDB, Express, React, and Node.js) using password hashing for CRUD methods. Allows you to favorite/unfavorite different movies once logged in.",
-      imageUrl: "css/img/nerdflixcorn.png"
+      imageUrl: "css/img/nerdflixcorn.png",
+      daClass: "c1"
     },
     {
       tag: "mma",
@@ -123,7 +125,8 @@ var teacherrepository = (function () {
       instruments: "https://www.mountainsidemusicacademy.com/",
       github: "https://www.mountainsidemusicacademy.com/",
       description: "A website for a music school",
-      imageUrl: "css/img/mtnipad2.png"
+      imageUrl: "css/img/mtnipad2.png",
+      daClass: "c2"
     },
     {
       tag: "din",
@@ -131,7 +134,8 @@ var teacherrepository = (function () {
       instruments: "https://the-gaffer-5.github.io/real-cookbook-app/",
       github: "https://github.com/The-Gaffer-5/real-cookbook-app",
       description: "jQuery website that pulls data from food2fork api",
-      imageUrl: "css/img/dinnercarrot.png"
+      imageUrl: "css/img/dinnercarrot.png",
+      daClass: "c3"
     },
     {
       tag: "meet",
@@ -139,7 +143,8 @@ var teacherrepository = (function () {
       instruments: "https://the-gaffer-5.github.io/meetup/",
       github: "https://github.com/The-Gaffer-5/meetup",
       description: "Meetup Mockup is a Web Progressive App that uses the meetup API and AWS. Data visualization is displayed where applicable.",
-      imageUrl: "css/img/placeholder.png"
+      imageUrl: "css/img/placeholder.png",
+      daClass: "c4"
     },
     {
       tag: "clark",
@@ -147,7 +152,8 @@ var teacherrepository = (function () {
       instruments: "https://humbabah.itch.io/clarksdomebreaker",
       github: "https://humbabah.itch.io/clarksdomebreaker",
       description: "Game made at a gamejam",
-      imageUrl: "css/img/clarks.png"
+      imageUrl: "css/img/clarks.png",
+      daClass: "c5"
     },
     {
       tag: "quiz",
@@ -155,7 +161,8 @@ var teacherrepository = (function () {
       instruments: "https://the-gaffer-5.github.io/my-awesome-quiz-app/",
       github: "https://github.com/The-Gaffer-5/my-awesome-quiz-app",
       description: "Angular quiz app that tests your knowledge of French or Math.",
-      imageUrl: "css/img/quiz.png"
+      imageUrl: "css/img/quiz.png",
+      daClass: "c6"
     },
     {
       tag: "vue",
@@ -163,13 +170,14 @@ var teacherrepository = (function () {
       instruments: "https://the-gaffer-5.github.io/vue-todo-app/",
       github: "https://github.com/The-Gaffer-5/vue-todo-app",
       description: "Small app that allows you to add/remove TODO items.",
-      imageUrl: "css/img/placeholder.png"
+      imageUrl: "css/img/placeholder.png",
+      daClass: "c7"
     },
   ];
 
 
   function addNewCard(teacher) {
-    var $newTeacher = $('<div class="project-card" id="box-' + teacher.tag + '"><div class="c3"><a><img class="little-comp" src="' + teacher.imageUrl + '"><h3 id="' + teacher.tag + '">' + teacher.name + '</h3></a></div></div>');
+    var $newTeacher = $('<div class="project-card" id="box-' + teacher.tag + '"><div class="' + teacher.daClass + '"><a><img class="little-comp" src="' + teacher.imageUrl + '"><h3 id="' + teacher.tag + '">' + teacher.name + '</h3></a></div></div>');
     $(".my-projects").append($newTeacher);
     var $addModal = $('<div id="modal-' + teacher.tag + '" class="modal"><div class="modal-content"><span class="close">&times;</span><h1 id="mod-' + teacher.tag + '">' + teacher.name + '</h1><img class="modal-img" src="' + teacher.imageUrl + '" alt=""><p>' + teacher.description + '</p><a target="_blank" class="modal-link" href="' + teacher.instruments + '">Visit the Site</a><a target="_blank" class="modal-link" href="' + teacher.github + '">Github</a></div>');
     $("#big-wrapper").append($addModal);
