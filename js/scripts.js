@@ -101,74 +101,6 @@ startFade('.c5', 900)
 startFade('.c6', 1100)
 
 
-
-// var modal = document.getElementById("myModal");
-// var btn = document.getElementById("myBtn");
-// var span = document.getElementsByClassName("close")[0];
-// btn.onclick = function () {
-//   modal.style.display = "block";
-// }
-// span.onclick = function () {
-//   modal.style.display = "none";
-// }
-// window.onclick = function (event) {
-//   if (event.target == modal) {
-//     modal.style.display = "none";
-//   }
-// }
-
-// var nerdModal = document.getElementById("nerdModal");
-// var nerdBtn = document.getElementById("nerdBtn");
-// var nerdSpan = document.getElementsByClassName("nerdClose")[0];
-// nerdBtn.onclick = function () {
-//   nerdModal.style.display = "block";
-// }
-// nerdSpan.onclick = function () {
-//   nerdModal.style.display = "none";
-// }
-// window.onclick = function (event) {
-//   if (event.target == nerdModal) {
-//     nerdModal.style.display = "none";
-//   }
-// }
-
-// var dinModal = document.getElementById("dinModal");
-// var dinBtn = document.getElementById("dinBtn");
-// var dinSpan = document.getElementsByClassName("dinClose")[0];
-// dinBtn.onclick = function () {
-//   dinModal.style.display = "block";
-// }
-// dinSpan.onclick = function () {
-//   dinModal.style.display = "none";
-// }
-// window.onclick = function (event) {
-//   if (event.target == dinModal) {
-//     nerdModal.style.display = "none";
-//   }
-// }
-
-
-//-------------------LOADING SCREEN----------------------//
-// function onReady(callback) {
-//   var intervalId = window.setInterval(function () {
-//     if (document.getElementsByTagName('body')[0] !== undefined) {
-//       window.clearInterval(intervalId);
-//       callback.call(this);
-//     }
-//   }, 1500);
-// }
-
-// function setVisible(selector, visible) {
-//   document.querySelector(selector).style.display = visible ? 'block' : 'none';
-// }
-
-// onReady(function () {
-//   setVisible('#big-wrapper', true);
-//   setVisible('#loading', false);
-// });
-
-
-
 // ---------------MODAL---------------
 
 var teacherrepository = (function () {
@@ -289,3 +221,26 @@ teacherrepository.getAll().forEach(function (eachTeach) {
   $('#' + eachTeach.tag).click(teacherrepository.addModal(eachTeach));
 
 })
+
+
+
+//-------------------LOADING SCREEN----------------------//
+// function onReady(callback) {
+//   var intervalId = window.setInterval(function () {
+//     if (document.getElementsByTagName('body')[0] !== undefined) {
+//       window.clearInterval(intervalId);
+//       callback.call(this);
+//     }
+//   }, 1500);
+// }
+
+// function setVisible(selector, visible) {
+//   document.querySelector(selector).style.display = visible ? 'block' : 'none';
+// }
+
+// onReady(function () {
+//   setVisible('#big-wrapper', true);
+//   setVisible('#loading', false);
+// });
+
+
