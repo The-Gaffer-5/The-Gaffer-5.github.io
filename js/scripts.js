@@ -102,6 +102,52 @@ startFade('.c6', 1100)
 
 
 
+// var modal = document.getElementById("myModal");
+// var btn = document.getElementById("myBtn");
+// var span = document.getElementsByClassName("close")[0];
+// btn.onclick = function () {
+//   modal.style.display = "block";
+// }
+// span.onclick = function () {
+//   modal.style.display = "none";
+// }
+// window.onclick = function (event) {
+//   if (event.target == modal) {
+//     modal.style.display = "none";
+//   }
+// }
+
+// var nerdModal = document.getElementById("nerdModal");
+// var nerdBtn = document.getElementById("nerdBtn");
+// var nerdSpan = document.getElementsByClassName("nerdClose")[0];
+// nerdBtn.onclick = function () {
+//   nerdModal.style.display = "block";
+// }
+// nerdSpan.onclick = function () {
+//   nerdModal.style.display = "none";
+// }
+// window.onclick = function (event) {
+//   if (event.target == nerdModal) {
+//     nerdModal.style.display = "none";
+//   }
+// }
+
+// var dinModal = document.getElementById("dinModal");
+// var dinBtn = document.getElementById("dinBtn");
+// var dinSpan = document.getElementsByClassName("dinClose")[0];
+// dinBtn.onclick = function () {
+//   dinModal.style.display = "block";
+// }
+// dinSpan.onclick = function () {
+//   dinModal.style.display = "none";
+// }
+// window.onclick = function (event) {
+//   if (event.target == dinModal) {
+//     nerdModal.style.display = "none";
+//   }
+// }
+
+
 //-------------------LOADING SCREEN----------------------//
 // function onReady(callback) {
 //   var intervalId = window.setInterval(function () {
@@ -120,3 +166,126 @@ startFade('.c6', 1100)
 //   setVisible('#big-wrapper', true);
 //   setVisible('#loading', false);
 // });
+
+
+
+// ---------------MODAL---------------
+
+var teacherrepository = (function () {
+
+
+
+
+  var repository = [
+    {
+      tag: "nerd",
+      name: "Nerdflix",
+      instruments: "https://prescottflixapp.herokuapp.com/client/",
+      github: "https://github.com/The-Gaffer-5/Nerdflix",
+      description: "MERN stack (MongoDB, Express, React, and Node.js) using password hashing for CRUD methods. Allows you to favorite/unfavorite different movies once logged in.",
+      imageUrl: "css/img/nerdflixcorn.png"
+    },
+    {
+      tag: "mma",
+      name: "Mountainside Music Academy",
+      instruments: "https://www.mountainsidemusicacademy.com/",
+      github: "https://www.mountainsidemusicacademy.com/",
+      description: "A website for a music school",
+      imageUrl: "css/img/mtnipad2.png"
+    },
+    {
+      tag: "din",
+      name: "What's for Dinner",
+      instruments: "https://the-gaffer-5.github.io/real-cookbook-app/",
+      github: "https://github.com/The-Gaffer-5/real-cookbook-app",
+      description: "jQuery website that pulls data from food2fork api",
+      imageUrl: "css/img/dinnercarrot.png"
+    },
+    {
+      tag: "meet",
+      name: "Meetup App",
+      instruments: "https://the-gaffer-5.github.io/meetup/",
+      github: "https://github.com/The-Gaffer-5/meetup",
+      description: "Meetup Mockup is a Web Progressive App that uses the meetup API and AWS. Data visualization is displayed where applicable.",
+      imageUrl: "css/img/placeholder.png"
+    },
+    {
+      tag: "clark",
+      name: "Clark's Domebreaker",
+      instruments: "https://humbabah.itch.io/clarksdomebreaker",
+      github: "https://humbabah.itch.io/clarksdomebreaker",
+      description: "Game made at a gamejam",
+      imageUrl: "css/img/clarks.png"
+    },
+    {
+      tag: "quiz",
+      name: "Angular Quiz App",
+      instruments: "https://the-gaffer-5.github.io/my-awesome-quiz-app/",
+      github: "https://github.com/The-Gaffer-5/my-awesome-quiz-app",
+      description: "Angular quiz app that tests your knowledge of French or Math.",
+      imageUrl: "css/img/quiz.png"
+    },
+    {
+      tag: "vue",
+      name: "Vue Todo List",
+      instruments: "https://the-gaffer-5.github.io/vue-todo-app/",
+      github: "https://github.com/The-Gaffer-5/vue-todo-app",
+      description: "Small app that allows you to add/remove TODO items.",
+      imageUrl: "css/img/placeholder.png"
+    },
+  ];
+
+
+  function addNewCard(teacher) {
+    var $newTeacher = $('<div class="project-card" id="box-' + teacher.tag + '"><div class="c3"><a><img class="little-comp" src="' + teacher.imageUrl + '"><h3 id="' + teacher.tag + '">' + teacher.name + '</h3></a></div></div>');
+    $(".my-projects").append($newTeacher);
+    var $addModal = $('<div id="modal-' + teacher.tag + '" class="modal"><div class="modal-content"><span class="close">&times;</span><h1 id="mod-' + teacher.tag + '">' + teacher.name + '</h1><img class="modal-img" src="' + teacher.imageUrl + '" alt=""><p>' + teacher.description + '</p><a target="_blank" class="modal-link" href="' + teacher.instruments + '">Visit the Site</a><a target="_blank" class="modal-link" href="' + teacher.github + '">Github</a></div>');
+    $("#big-wrapper").append($addModal);
+    //makeModal(teacher);
+  };
+
+  function getAll() {
+    return repository;
+  }
+
+
+
+  function addModal(teacher) {
+    $('#box-' + teacher.tag).click(function () {
+      if ($("#" + teacher.tag).text() === $("#mod-" + teacher.tag).text()) {
+        document.getElementById("modal-" + teacher.tag).style.display = "block";
+      } else {
+        console.log("modal error")
+
+
+      }
+      window.onclick = function (event) {
+        if (event.target === document.getElementById("modal-" + teacher.tag)) {
+          document.getElementById("modal-" + teacher.tag).style.display = "none";
+          //$addModal = $('')
+          $(".teachName").text("");
+        }
+      }
+      $('.close').click(function () {
+        document.getElementById("modal-" + teacher.tag).style.display = "none";
+      })
+    })
+  }
+
+
+
+  return {
+    addNewCard: addNewCard,
+    addModal: addModal,
+    getAll: getAll,
+  }
+
+
+
+})();
+
+teacherrepository.getAll().forEach(function (eachTeach) {
+  teacherrepository.addNewCard(eachTeach);
+  $('#' + eachTeach.tag).click(teacherrepository.addModal(eachTeach));
+
+})
