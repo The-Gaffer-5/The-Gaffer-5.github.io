@@ -119,15 +119,7 @@ var teacherrepository = (function () {
       imageUrl: "css/img/nerdflixcorn.png",
       daClass: "c1"
     },
-    {
-      tag: "vue",
-      name: "Fello",
-      instruments: "https://the-gaffer-5.github.io/fello-deploy/",
-      github: "https://github.com/The-Gaffer-5/fello-app",
-      description: "Small app that allows you to add/remove TODO items.",
-      imageUrl: "css/img/fello.png",
-      daClass: "c7"
-    },
+
     {
       tag: "mma",
       name: "Mountainside Music Academy",
@@ -145,6 +137,15 @@ var teacherrepository = (function () {
       description: "jQuery website that pulls data from food2fork api",
       imageUrl: "css/img/dinnercarrot.png",
       daClass: "c3"
+    },
+    {
+      tag: "vue",
+      name: "Fello",
+      instruments: "https://the-gaffer-5.github.io/fello-deploy/",
+      github: "https://github.com/The-Gaffer-5/fello-app",
+      description: "Small app that allows you to add/remove TODO items.",
+      imageUrl: "css/img/fello.png",
+      daClass: "c7"
     },
     {
       tag: "meet",
