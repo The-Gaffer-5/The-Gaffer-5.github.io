@@ -120,6 +120,15 @@ var teacherrepository = (function () {
       daClass: "c1"
     },
     {
+      tag: "vue",
+      name: "Fello",
+      instruments: "https://the-gaffer-5.github.io/fello-deploy/",
+      github: "https://github.com/The-Gaffer-5/fello-app",
+      description: "Small app that allows you to add/remove TODO items.",
+      imageUrl: "css/img/fello.png",
+      daClass: "c7"
+    },
+    {
       tag: "mma",
       name: "Mountainside Music Academy",
       instruments: "https://www.mountainsidemusicacademy.com/",
@@ -164,15 +173,7 @@ var teacherrepository = (function () {
       imageUrl: "css/img/quiz.png",
       daClass: "c6"
     },
-    {
-      tag: "vue",
-      name: "Vue Todo List",
-      instruments: "https://the-gaffer-5.github.io/vue-todo-app/",
-      github: "https://github.com/The-Gaffer-5/vue-todo-app",
-      description: "Small app that allows you to add/remove TODO items.",
-      imageUrl: "css/img/placeholder.png",
-      daClass: "c7"
-    },
+
   ];
 
 
