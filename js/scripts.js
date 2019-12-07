@@ -145,7 +145,7 @@ var teacherrepository = (function () {
       github: "https://github.com/The-Gaffer-5/fello-app",
       description: "Small app that allows you to add/remove TODO items.",
       imageUrl: "css/img/fello.png",
-      daClass: "c7"
+      daClass: "c4"
     },
     {
       tag: "meet",
@@ -154,7 +154,7 @@ var teacherrepository = (function () {
       github: "https://github.com/The-Gaffer-5/meetup",
       description: "Meetup Mockup is a Web Progressive App that uses the meetup API and AWS. Data visualization is displayed where applicable.",
       imageUrl: "css/img/placeholder.png",
-      daClass: "c4"
+      daClass: "c5"
     },
     {
       tag: "clark",
@@ -163,7 +163,7 @@ var teacherrepository = (function () {
       github: "https://humbabah.itch.io/clarksdomebreaker",
       description: "Game made at a gamejam",
       imageUrl: "css/img/clarks.png",
-      daClass: "c5"
+      daClass: "c6"
     },
     {
       tag: "quiz",
@@ -172,7 +172,7 @@ var teacherrepository = (function () {
       github: "https://github.com/The-Gaffer-5/my-awesome-quiz-app",
       description: "Angular quiz app that tests your knowledge of French or Math.",
       imageUrl: "css/img/quiz.png",
-      daClass: "c6"
+      daClass: "c7"
     },
 
   ];
