@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b9a9ed5f.chunk.css",
+    "main.js": "/static/js/main.347fe08c.chunk.js",
+    "main.js.map": "/static/js/main.347fe08c.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.989530f5.js",
+    "runtime-main.js.map": "/static/js/runtime-main.989530f5.js.map",
+    "static/js/2.a11caf71.chunk.js": "/static/js/2.a11caf71.chunk.js",
+    "static/js/2.a11caf71.chunk.js.map": "/static/js/2.a11caf71.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.ff0dbe5e6c55692476922894c079a820.js": "/precache-manifest.ff0dbe5e6c55692476922894c079a820.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.b9a9ed5f.chunk.css.map": "/static/css/main.b9a9ed5f.chunk.css.map",
+    "static/js/2.a11caf71.chunk.js.LICENSE": "/static/js/2.a11caf71.chunk.js.LICENSE",
+    "static/media/index.css": "/static/media/prescott.c754355e.png",
+    "static/media/logo.svg": "/static/media/logo.270beaff.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.989530f5.js",
+    "static/js/2.a11caf71.chunk.js",
+    "static/css/main.b9a9ed5f.chunk.css",
+    "static/js/main.347fe08c.chunk.js"
+  ]
+}
